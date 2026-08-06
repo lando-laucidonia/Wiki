@@ -48,7 +48,7 @@ defaults:
       path: ""
     values:
       layout: page
-      image: /assets/images/og/og-default.svg
+      image: /assets/images/og/og-default.png
   - scope:
       path: ""
       type: historia

@@ -1,0 +1,19 @@
+---
+layout: page
+title: Território
+description: Geografia, Estados, províncias, cidades e regiões do Império do Lando e Laucidônia.
+permalink: /territorio/
+section: Território
+---
+<div class="feature-grid">
+  <div class="prose">
+    <h2>Atlas Imperial</h2>
+    <p>O território nacional distribui-se por quatro Estados constituintes, províncias diretamente vinculadas à União e o Distrito de São João de Guaratín. O atlas provincial usa dados estruturados, o que permite filtrar, comparar e atualizar as unidades sem reescrever manualmente cada página.</p>
+    <p><a class="button" href="{{ '/territorio/provincias/' | relative_url }}">Consultar todas as províncias</a></p>
+  </div>
+  <img src="{{ '/assets/images/maps/mapa-imperio.svg' | relative_url }}" alt="Mapa provisório do Império do Lando e Laucidônia">
+</div>
+<h2>Artigos territoriais</h2>
+<div class="card-grid">
+{% for doc in site.territorios %}<article class="card"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p><a class="stretched" href="{{ doc.url | relative_url }}">Ler artigo</a></article>{% endfor %}
+</div>

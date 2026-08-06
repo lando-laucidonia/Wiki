@@ -1,0 +1,10 @@
+---
+layout: page
+title: Cidades
+permalink: /cidades/
+description: Diretório de cidades históricas, capitais e centros urbanos do Império.
+section: Cidades
+---
+<div class="card-grid">
+{% for doc in site.cidades %}<article class="card"><span class="label">{{ doc.province | default: 'Cidade' }}</span><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p><a class="stretched" href="{{ doc.url | relative_url }}">Ler artigo</a></article>{% endfor %}
+</div>

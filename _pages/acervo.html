@@ -1,0 +1,11 @@
+---
+layout: page
+title: Acervo documental
+permalink: /acervo/
+description: Textos-base, documentos de trabalho e arquivos utilizados no desenvolvimento do cânone.
+section: Acervo
+---
+<p>Os documentos desta seção são preservados como fontes de desenvolvimento, mesmo quando ainda contêm formulações antigas ou pontos que precisam ser reconciliados com o cânone atual.</p>
+<div class="card-grid">
+{% for doc in site.acervo %}<article class="card"><span class="label">{{ doc.status }}</span><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p><a class="stretched" href="{{ doc.url | relative_url }}">Consultar documento</a></article>{% endfor %}
+</div>

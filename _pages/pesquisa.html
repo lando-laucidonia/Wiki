@@ -1,0 +1,12 @@
+---
+layout: page
+title: Pesquisa
+permalink: /pesquisa/
+description: Pesquisa interna da Enciclopédia Imperial do Lando.
+section: Pesquisa
+---
+<form class="search-form" data-search-form data-index="{{ '/search.json' | relative_url }}">
+  <input type="search" aria-label="Termo de pesquisa" placeholder="Pesquisar em todo o arquivo">
+  <button class="button" type="submit">Pesquisar</button>
+</form>
+<div class="search-results" data-search-results></div>

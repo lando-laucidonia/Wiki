@@ -1,0 +1,11 @@
+---
+layout: page
+title: Instituições
+description: Estrutura da Coroa, do governo, do parlamento, da justiça, da defesa e dos direitos fundamentais.
+permalink: /instituicoes/
+section: Instituições
+---
+<div class="card-grid">
+{% assign docs = site.instituicoes | sort: 'order' %}
+{% for doc in docs %}<article class="card"><span class="label">{{ doc.category | default: 'Instituição' }}</span><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p><a class="stretched" href="{{ doc.url | relative_url }}">Ler artigo</a></article>{% endfor %}
+</div>

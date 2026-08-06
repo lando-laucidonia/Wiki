@@ -1,0 +1,29 @@
+---
+layout: page
+title: Províncias e Distrito Imperial
+description: Diretório das 61 províncias e do Distrito de São João de Guaratín.
+permalink: /territorio/provincias/
+section: Território
+---
+<div class="directory-tools">
+  <input type="search" placeholder="Pesquisar província ou capital" aria-label="Pesquisar província ou capital" data-province-search>
+  <select aria-label="Filtrar por Estado" data-state-filter>
+    <option value="">Todos os Estados</option>
+    <option>Império do Lando</option>
+    <option>Império da Laucidônia</option>
+    <option>Reino de Dalmaci e Naxo</option>
+    <option>Reino de Sarso</option>
+    <option>União Imperial</option>
+  </select>
+</div>
+<p data-province-count></p>
+<div class="province-list">
+{% assign provinces = site.provincias | sort: 'title' %}
+{% for province in provinces %}
+<a class="province-card" href="{{ province.url | relative_url }}" data-province-card data-state="{{ province.estado }}">
+  <span>{{ province.sigla }} · {{ province.estado }}</span>
+  <strong>{{ province.title }}</strong>
+  <span>Capital: {{ province.capital }} · {{ province.populacao }}</span>
+</a>
+{% endfor %}
+</div>

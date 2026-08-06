@@ -1,0 +1,10 @@
+---
+layout: page
+title: Cultura e sociedade
+permalink: /cultura/
+description: Idiomas, identidades regionais, artes, mídia, educação, costumes e vida social.
+section: Cultura
+---
+<div class="card-grid">
+{% for doc in site.cultura %}<article class="card"><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p><a class="stretched" href="{{ doc.url | relative_url }}">Ler artigo</a></article>{% endfor %}
+</div>

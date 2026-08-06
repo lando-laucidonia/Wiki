@@ -1,0 +1,11 @@
+---
+layout: page
+title: História
+description: Períodos, acontecimentos e transformações da civilização landesa e da União Imperial.
+permalink: /historia/
+section: História
+---
+<div class="card-grid">
+{% assign docs = site.historia | sort: 'order' %}
+{% for doc in docs %}<article class="card"><span class="label">{{ doc.period | default: 'História' }}</span><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p><a class="stretched" href="{{ doc.url | relative_url }}">Ler artigo</a></article>{% endfor %}
+</div>

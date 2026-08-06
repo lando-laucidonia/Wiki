@@ -1,0 +1,10 @@
+---
+layout: page
+title: Estados constituintes
+description: Os quatro Estados históricos que formam a União Imperial.
+permalink: /estados/
+section: Estados
+---
+<div class="card-grid four">
+{% for state in site.data.states %}<article class="card"><span class="label">{{ state.type }}</span><h3>{{ state.name }}</h3><p><strong>Capital:</strong> {{ state.capital }}</p><p>{{ state.summary }}</p><a class="stretched" href="{{ '/estados/' | append: state.slug | append: '/' | relative_url }}">Abrir página</a></article>{% endfor %}
+</div>

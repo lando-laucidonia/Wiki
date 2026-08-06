@@ -1,0 +1,10 @@
+---
+layout: page
+title: Religião
+permalink: /religiao/
+description: Igreja Landesa, cristianização, Cisma Austral, santos e tradições religiosas.
+section: Religião
+---
+<div class="card-grid">
+{% for doc in site.religiao %}<article class="card"><span class="label">{{ doc.period | default: 'Religião' }}</span><h3>{{ doc.title }}</h3><p>{{ doc.description }}</p><a class="stretched" href="{{ doc.url | relative_url }}">Ler artigo</a></article>{% endfor %}
+</div>

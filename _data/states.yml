@@ -1,0 +1,20 @@
+- name: Império do Lando
+  slug: imperio-do-lando
+  capital: Cidade do Lando
+  type: Império constituinte
+  summary: Núcleo histórico, civilizacional, religioso e político da tradição landesa.
+- name: Império da Laucidônia
+  slug: imperio-da-laucidonia
+  capital: Lune
+  type: Império constituinte
+  summary: Estado oriental de forte tradição marítima, comercial e cultural, voltado ao Mar Sorene.
+- name: Reino de Dalmaci e Naxo
+  slug: reino-de-dalmaci-e-naxo
+  capital: Cidade do Naxo
+  type: Reino constituinte
+  summary: Estado do sudoeste e centro-sul, marcado por polos energéticos, industriais e marítimos.
+- name: Reino de Sarso
+  slug: reino-de-sarso
+  capital: Récie
+  type: Reino constituinte
+  summary: Estado histórico do norte e noroeste, com identidade aristocrática e cultural própria.

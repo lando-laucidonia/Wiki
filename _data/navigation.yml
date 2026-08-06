@@ -1,0 +1,18 @@
+- label: Início
+  url: /
+- label: O Império
+  url: /imperio/
+- label: História
+  url: /historia/
+- label: Território
+  url: /territorio/
+- label: Estados
+  url: /estados/
+- label: Instituições
+  url: /instituicoes/
+- label: Religião
+  url: /religiao/
+- label: Cultura
+  url: /cultura/
+- label: Acervo
+  url: /acervo/

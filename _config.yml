@@ -1,0 +1,117 @@
+title: Enciclopédia Imperial do Lando
+short_title: Lando e Laucidônia
+description: Arquivo canônico, atlas e enciclopédia do Império do Lando e Laucidônia.
+lang: pt-BR
+timezone: America/Sao_Paulo
+url: ""
+baseurl: ""
+repository: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  historia:
+    output: true
+    permalink: /historia/:name/
+  instituicoes:
+    output: true
+    permalink: /instituicoes/:name/
+  territorios:
+    output: true
+    permalink: /territorio/:name/
+  provincias:
+    output: true
+    permalink: /territorio/provincias/:name/
+  cidades:
+    output: true
+    permalink: /cidades/:name/
+  religiao:
+    output: true
+    permalink: /religiao/:name/
+  personagens:
+    output: true
+    permalink: /personagens/:name/
+  cultura:
+    output: true
+    permalink: /cultura/:name/
+  acervo:
+    output: true
+    permalink: /acervo/:name/
+
+collections_dir: conteudo
+
+# Valores padrão compartilhados pelas coleções.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/images/og/og-default.svg
+  - scope:
+      path: ""
+      type: historia
+    values:
+      layout: article
+      section: História
+  - scope:
+      path: ""
+      type: instituicoes
+    values:
+      layout: article
+      section: Instituições
+  - scope:
+      path: ""
+      type: territorios
+    values:
+      layout: article
+      section: Território
+  - scope:
+      path: ""
+      type: provincias
+    values:
+      layout: province
+      section: Províncias
+  - scope:
+      path: ""
+      type: cidades
+    values:
+      layout: article
+      section: Cidades
+  - scope:
+      path: ""
+      type: religiao
+    values:
+      layout: article
+      section: Religião
+  - scope:
+      path: ""
+      type: personagens
+    values:
+      layout: article
+      section: Personagens
+  - scope:
+      path: ""
+      type: cultura
+    values:
+      layout: article
+      section: Cultura
+  - scope:
+      path: ""
+      type: acervo
+    values:
+      layout: source
+      section: Acervo
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - vendor
+  - .gitignore
+
+include:
+  - _pages

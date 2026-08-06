@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign searchable = site.pages | concat: site.historia | concat: site.instituicoes | concat: site.territorios | concat: site.provincias | concat: site.cidades | concat: site.religiao | concat: site.personagens | concat: site.cultura | concat: site.acervo %}
+{% for item in searchable %}
+{% unless item.url contains '.json' or item.title == nil %}
+{
+  "title": {{ item.title | jsonify }},
+  "url": {{ item.url | relative_url | jsonify }},
+  "section": {{ item.section | default: item.collection | default: 'Enciclopédia' | jsonify }},
+  "description": {{ item.description | default: '' | strip_html | normalize_whitespace | jsonify }},
+  "content": {{ item.content | strip_html | normalize_whitespace | truncate: 1200 | jsonify }}
+}{% unless forloop.last %},{% endunless %}
+{% endunless %}
+{% endfor %}
+]

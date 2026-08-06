@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% assign all_items = site.pages | concat: site.historia | concat: site.instituicoes | concat: site.territorios | concat: site.provincias | concat: site.cidades | concat: site.religiao | concat: site.personagens | concat: site.cultura | concat: site.acervo %}
+{% for item in all_items %}
+{% if item.url and item.url != '/404.html' and item.url contains '.json' == false %}
+  <url>
+    <loc>{{ item.url | absolute_url }}</loc>
+    {% if item.updated %}<lastmod>{{ item.updated | date_to_xmlschema }}</lastmod>{% endif %}
+  </url>
+{% endif %}
+{% endfor %}
+</urlset>

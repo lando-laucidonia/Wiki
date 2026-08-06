@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<section class="province-hero">
+  <div class="container">
+    {% include breadcrumbs.html %}
+    <div class="province-code">{{ page.sigla }}</div>
+    <p class="eyebrow">{{ page.estado }} · {{ page.regiao }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lead">Província cuja capital é {{ page.capital }}, integrada à organização territorial do Império do Lando e Laucidônia.</p>
+  </div>
+</section>
+<section class="container content-wrap">
+  <div class="stat-grid province-stats">
+    <div><span>População</span><strong>{{ page.populacao }}</strong></div>
+    <div><span>Área</span><strong>{{ page.area }} km²</strong></div>
+    <div><span>Densidade</span><strong>{{ page.densidade }} hab./km²</strong></div>
+    <div><span>Capital</span><strong>{{ page.capital }}</strong></div>
+    <div><span>Municípios</span><strong>{{ page.municipios }}</strong></div>
+    <div><span>IDH</span><strong>{{ page.idh }}</strong></div>
+  </div>
+  <div class="article-grid">
+    <article class="prose article-body">
+      <h2>Visão geral</h2>
+      <p>{{ page.title }} possui {{ page.freguesias }} freguesias e {{ page.municipios }} municípios. A região metropolitana de {{ page.capital }} reúne aproximadamente {{ page.pop_metropolitana }}, enquanto a principal atividade econômica registrada no conjunto de dados é {{ page.atividade | downcase }}.</p>
+      <h2>Economia e infraestrutura</h2>
+      <p>A composição econômica provincial registra {{ page.setor_primario }}% no primeiro setor, {{ page.setor_secundario }}% no segundo setor e {{ page.setor_terciario }}% no terceiro setor. O índice de qualidade de infraestrutura informado é de {{ page.infraestrutura }}%, com desemprego de {{ page.desemprego }}% e nota educacional de {{ page.educacao }}.</p>
+      <h2>Limites territoriais</h2>
+      <p>{{ page.limites }}</p>
+      {% if content != '' %}{{ content }}{% endif %}
+      <div class="editor-note"><strong>Desenvolvimento futuro:</strong> acrescente aqui a história, a cultura, as cidades, a geografia física, os símbolos e as particularidades políticas da província.</div>
+    </article>
+    <aside class="article-aside">
+      <div class="aside-card">
+        <strong>Dados provinciais</strong>
+        <dl>
+          <div><dt>ID</dt><dd>{{ page.province_id }}</dd></div>
+          <div><dt>Sigla</dt><dd>{{ page.sigla }}</dd></div>
+          <div><dt>Estado</dt><dd>{{ page.estado }}</dd></div>
+          <div><dt>Região</dt><dd>{{ page.regiao }}</dd></div>
+          <div><dt>Capital</dt><dd>{{ page.capital }}</dd></div>
+          <div><dt>P&amp;D per capita</dt><dd>{{ page.pd_per_capita }} mil US$</dd></div>
+        </dl>
+      </div>
+    </aside>
+  </div>
+</section>

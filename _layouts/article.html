@@ -1,1 +1,30 @@
-
+---
+layout: default
+---
+<section class="page-hero article-hero">
+  <div class="container">
+    {% include breadcrumbs.html %}
+    <div class="article-meta"><span>{{ page.section }}</span>{% include status.html %}{% if page.period %}<span>{{ page.period }}</span>{% endif %}</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+  </div>
+</section>
+<div class="container article-grid">
+  <article class="prose article-body">{{ content }}</article>
+  <aside class="article-aside">
+    <div class="aside-card">
+      <strong>Ficha editorial</strong>
+      <dl>
+        <div><dt>Situação</dt><dd>{{ page.status | default: 'canônico' }}</dd></div>
+        {% if page.period %}<div><dt>Período</dt><dd>{{ page.period }}</dd></div>{% endif %}
+        {% if page.updated %}<div><dt>Atualização</dt><dd>{{ page.updated }}</dd></div>{% endif %}
+      </dl>
+    </div>
+    {% if page.related %}
+    <div class="aside-card">
+      <strong>Assuntos relacionados</strong>
+      <ul>{% for item in page.related %}<li>{{ item }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+  </aside>
+</div>

@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <span>Arquivo canônico do Império do Lando e Laucidônia</span>
+      <a href="{{ '/guia-do-canon/' | relative_url }}">Registro do cânone</a>
+    </div>
+  </div>
+  <div class="container masthead">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Página inicial">
+      <img src="{{ '/assets/images/brand/brasao-imperial.svg' | relative_url }}" alt="Brasão provisório do Império">
+      <span>
+        <strong>{{ site.short_title }}</strong>
+        <small>Enciclopédia Imperial</small>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Navegação principal">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+      <a class="search-link" href="{{ '/pesquisa/' | relative_url }}">Pesquisar</a>
+    </nav>
+  </div>
+</header>

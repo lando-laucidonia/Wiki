@@ -1,0 +1,2 @@
+{% assign status = include.status | default: page.status | default: 'canônico' %}
+<span class="status status-{{ status | slugify }}">{{ status }}</span>

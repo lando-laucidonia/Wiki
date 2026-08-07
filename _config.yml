@@ -5,7 +5,7 @@ lang: pt-BR
 timezone: America/Sao_Paulo
 url: "https://lando-laucidonia.github.io"
 baseurl: "Wiki"
-repository: ""
+repository: "lando-laucidonia/Wiki"
 
 markdown: kramdown
 highlighter: rouge

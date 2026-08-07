@@ -3,8 +3,8 @@ short_title: Lando e Laucidônia
 description: Arquivo canônico, atlas e enciclopédia do Império do Lando e Laucidônia.
 lang: pt-BR
 timezone: America/Sao_Paulo
-url: ""
-baseurl: ""
+url: "https://lando-laucidonia.github.io"
+baseurl: "Wiki"
 repository: ""
 
 markdown: kramdown

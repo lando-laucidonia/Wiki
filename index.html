@@ -1,15 +1,78 @@
 ---
 layout: default
-title: "Wiki Oficial"
-hide_title: true
+title: Início
+description: Enciclopédia, atlas e arquivo canônico do Império do Lando e Laucidônia.
+permalink: /
 ---
-<section class="hero"><div class="shell hero-inner"><p class="eyebrow">Enciclopédia canônica e atlas nacional</p><h1>Império do Lando e Laucidônia</h1><p>Referência organizada sobre a geografia, a história, as instituições, as províncias, a cultura e a tradição do Império.</p><div class="hero-actions"><a class="btn primary" href="{{ '/geografia/' | relative_url }}">Explorar Geografia</a><a class="btn" href="{{ '/sobre/' | relative_url }}">Conhecer o Império</a></div></div></section>
-<section class="section"><div class="shell"><p class="eyebrow">Áreas da Wiki</p><h2>Explorar o cânone</h2><div class="cards">
-<a class="card" href="{{ '/geografia/' | relative_url }}"><small>Atlas</small><h3>Geografia</h3><p>Tectônica, relevo, hidrografia, clima e organização física de Calisto.</p></a>
-<a class="card" href="{{ '/historia/' | relative_url }}"><small>Cronologia</small><h3>História</h3><p>Da formação da civilização landesa à ordem imperial contemporânea.</p></a>
-<a class="card" href="{{ '/provincias/' | relative_url }}"><small>Território</small><h3>62 unidades territoriais</h3><p>Dados provinciais, capitais, população, economia e limites.</p></a>
-<a class="card" href="{{ '/instituicoes/' | relative_url }}"><small>Estado</small><h3>Instituições</h3><p>Coroa, Parlamento, governo, direitos e segurança imperial.</p></a>
-<a class="card" href="{{ '/religiao/' | relative_url }}"><small>Tradição</small><h3>Religião</h3><p>História e organização da tradição católica no Império.</p></a>
-<a class="card" href="{{ '/cultura/' | relative_url }}"><small>Sociedade</small><h3>Cultura</h3><p>Identidades, línguas, artes, costumes e memória cultural.</p></a>
-</div></div></section>
-<section class="section" style="background:#eee7dc"><div class="shell"><p class="eyebrow">Novo na Wiki</p><h2>Tectônica de placas de Calisto</h2><p class="lead">A Placa Calistéia e seus limites com as placas Sul-Americana, Africana e Antártica explicam as grandes bacias do Faraipo e do Tamul, o Istmo de Sentilhe e a atividade orogênica do sudoeste imperial.</p><a href="{{ '/geografia/tectonica-de-placas/' | relative_url }}">Ler artigo completo →</a></div></section>
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Império do Lando e Laucidônia</p>
+    <h1>Uma civilização construída através dos milênios.</h1>
+    <p class="lead">Explore a história, o território, as instituições, a religião e a diversidade cultural de uma das maiores potências do continente de Calisto.</p>
+    <div class="hero-actions">
+      <a class="button" href="{{ '/imperio/' | relative_url }}">Conhecer o Império</a>
+      <a class="button secondary" href="{{ '/territorio/provincias/' | relative_url }}">Abrir o atlas provincial</a>
+    </div>
+  </div>
+</section>
+<div class="container stats-band">
+  <div class="stat-grid">
+    <div><span>População</span><strong>{{ site.data.facts.population_display }}</strong></div>
+    <div><span>Área</span><strong>{{ site.data.facts.area_display }}</strong></div>
+    <div><span>Estados</span><strong>{{ site.data.facts.states }}</strong></div>
+    <div><span>Províncias</span><strong>{{ site.data.facts.provinces }}</strong></div>
+    <div><span>Capital imperial</span><strong>{{ site.data.facts.capital_imperial }}</strong></div>
+    <div><span>Capital governamental</span><strong>{{ site.data.facts.capital_government }}</strong></div>
+  </div>
+</div>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><p class="eyebrow">União Imperial</p><h2>Quatro Estados históricos sob uma mesma Coroa</h2></div>
+      <p>A estrutura imperial preserva identidades políticas antigas, ao mesmo tempo que as integra em instituições nacionais comuns, numa federação de natureza imperial.</p>
+    </div>
+    <div class="card-grid four">
+      {% for state in site.data.states %}
+      <article class="card">
+        <span class="label">{{ state.type }}</span>
+        <h3>{{ state.name }}</h3>
+        <p>{{ state.summary }}</p>
+        <a class="stretched" href="{{ '/estados/' | append: state.slug | append: '/' | relative_url }}">Conhecer o Estado</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="section alt">
+  <div class="container feature-grid">
+    <div class="feature-panel">
+      <p class="eyebrow">Longa duração histórica</p>
+      <h2>Da civilização do Rio Faraipo ao Império contemporâneo</h2>
+      <p>A história landesa atravessa períodos pré-imperiais, dois grandes impérios, séculos medievais, uniões dinásticas, revoluções, república, ditadura e restauração monárquica.</p>
+      <a class="button" href="{{ '/historia/' | relative_url }}">Percorrer a cronologia</a>
+    </div>
+    <div class="feature-panel">
+      <ul class="timeline-list">
+        <li><strong>III milênio a.C.</strong><span>Raízes civilizacionais no vale do Rio Faraipo.</span></li>
+        <li><strong>Séc. XIV a.C.</strong><span>Formação do Primeiro Império Landês.</span></li>
+        <li><strong>907</strong><span>Conversão de Cleroriano e cristianização oficial.</span></li>
+        <li><strong>1469</strong><span>Tratado de Lune e formação da estrutura imperial moderna.</span></li>
+        <li><strong>1951</strong><span>Restauração imperial e ascensão da Casa de Castria.</span></li>
+        <li><strong>1989</strong><span>Início do reinado de Paulo IV.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><p class="eyebrow">Explorar o arquivo</p><h2>Portas de entrada para o universo</h2></div>
+      <p>Cada área reúne artigos canônicos, materiais em desenvolvimento e documentos de referência claramente identificados.</p>
+    </div>
+    <div class="card-grid">
+      <article class="card"><span class="label">Atlas</span><h3>Território e províncias</h3><p>Consulte as 61 províncias, o Distrito de São João de Guaratín, suas capitais, populações, economias e indicadores.</p><a class="stretched" href="{{ '/territorio/' | relative_url }}">Explorar o território</a></article>
+      <article class="card"><span class="label">Estado</span><h3>Política e instituições</h3><p>Compreenda a Coroa, o governo parlamentar, o federalismo, o sistema jurídico e as forças do Império.</p><a class="stretched" href="{{ '/instituicoes/' | relative_url }}">Abrir as instituições</a></article>
+      <article class="card"><span class="label">Civilização</span><h3>Religião e cultura</h3><p>Conheça a Igreja Landesa, as tradições regionais, os idiomas, as artes e os costumes da sociedade imperial.</p><a class="stretched" href="{{ '/religiao/' | relative_url }}">Conhecer a religião</a></article>
+    </div>
+  </div>
+</section>

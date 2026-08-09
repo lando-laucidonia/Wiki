@@ -1,67 +1,72 @@
-title: "Wiki Oficial — Império do Lando e Laucidônia"
-description: "Enciclopédia canônica, atlas nacional e arquivo histórico do Império do Lando e Laucidônia."
-url: "https://lando-laucidonia.github.io"
-baseurl: "/Wiki"
-lang: "pt-BR"
-timezone: "America/Sao_Paulo"
+title: Enciclopédia Imperial do Lando
+short_title: Lando e Laucidônia
+description: Arquivo canônico, atlas e enciclopédia do Império do Lando e Laucidônia.
+lang: pt-BR
+timezone: America/Sao_Paulo
+url: ""
+baseurl: ""
+repository: ""
+
 markdown: kramdown
+highlighter: rouge
 permalink: pretty
-future: false
-
-# As coleções editoriais ficam dentro da pasta conteudo/.
-collections_dir: conteudo
-
-exclude:
-  - README.md
-  - CONFIGURACAO.md
-  - scripts
-  - vendor
-  - Gemfile.lock
 
 collections:
-  geografia:
-    output: true
-    permalink: /geografia/:name/
   historia:
     output: true
     permalink: /historia/:name/
-  provincias:
-    output: true
-    permalink: /provincias/:name/
-  cidades:
-    output: true
-    permalink: /cidades/:name/
   instituicoes:
     output: true
     permalink: /instituicoes/:name/
-  personagens:
+  territorios:
     output: true
-    permalink: /personagens/:name/
+    permalink: /territorio/:name/
+  provincias:
+    output: true
+    permalink: /territorio/provincias/:name/
+  cidades:
+    output: true
+    permalink: /cidades/:name/
   religiao:
     output: true
     permalink: /religiao/:name/
+  personagens:
+    output: true
+    permalink: /personagens/:name/
   cultura:
     output: true
     permalink: /cultura/:name/
+  acervo:
+    output: true
+    permalink: /acervo/:name/
 
+collections_dir: conteudo
+
+# Valores padrão compartilhados pelas coleções.
 defaults:
   - scope:
       path: ""
     values:
       layout: page
-      image: /assets/images/og/og-default.png
-  - scope:
-      path: ""
-      type: geografia
-    values:
-      layout: article
-      section: Geografia
+      image: /assets/images/og/og-default.svg
   - scope:
       path: ""
       type: historia
     values:
       layout: article
       section: História
+  - scope:
+      path: ""
+      type: instituicoes
+    values:
+      layout: article
+      section: Instituições
+  - scope:
+      path: ""
+      type: territorios
+    values:
+      layout: article
+      section: Território
   - scope:
       path: ""
       type: provincias
@@ -76,10 +81,10 @@ defaults:
       section: Cidades
   - scope:
       path: ""
-      type: instituicoes
+      type: religiao
     values:
       layout: article
-      section: Instituições
+      section: Religião
   - scope:
       path: ""
       type: personagens
@@ -88,13 +93,25 @@ defaults:
       section: Personagens
   - scope:
       path: ""
-      type: religiao
-    values:
-      layout: article
-      section: Religião
-  - scope:
-      path: ""
       type: cultura
     values:
       layout: article
       section: Cultura
+  - scope:
+      path: ""
+      type: acervo
+    values:
+      layout: source
+      section: Acervo
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - vendor
+  - .gitignore
+
+include:
+  - _pages
